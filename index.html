@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b32">
+  <meta name="description" content="Découvrez votre Coffret Spirituel Complet : prières, méditations, réflexions et parcours spirituel.">
+  <title>Votre Coffret Spirituel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #101b32;
+      --navy-light: #192944;
+      --gold: #c9a96e;
+      --gold-light: #e6d2a8;
+      --cream: #f7f2e8;
+      --text: #f8f4eb;
+      --muted: #c8c2b7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(201,169,110,.13), transparent 45%),
+        var(--navy);
+    }
+
+    header {
+      text-align: center;
+      padding: 58px 20px 42px;
+    }
+
+    .ornament {
+      color: var(--gold);
+      font-size: 25px;
+      letter-spacing: 12px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(43px, 8vw, 72px);
+      line-height: 1.05;
+      color: var(--cream);
+    }
+
+    h1 span {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 590px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    .gold-line {
+      width: 76px;
+      height: 1px;
+      background: var(--gold);
+      margin: 27px auto;
+    }
+
+    main {
+      width: min(1080px, calc(100% - 36px));
+      margin: 0 auto;
+      padding-bottom: 65px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin: 8px 0 30px;
+    }
+
+    .section-heading h2 {
+      font-size: 32px;
+      color: var(--gold-light);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .collection {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
+      padding: 30px 25px 26px;
+      border: 1px solid rgba(201,169,110,.36);
+      border-radius: 3px;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,.045), transparent 55%),
+        var(--navy-light);
+      text-align: center;
+      transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .collection:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .collection-number {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+
+    .symbol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 74px;
+      height: 74px;
+      margin: 19px auto 17px;
+      border: 1px solid rgba(201,169,110,.55);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-size: 29px;
+    }
+
+    .collection h3 {
+      color: var(--cream);
+      font-size: 28px;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+
+    .collection p {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.9;
+      flex-grow: 1;
+    }
+
+    .contents {
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 19px 0 20px;
+    }
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      padding: 13px 12px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #172238;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: var(--gold-light);
+    }
+
+    .note {
+      max-width: 650px;
+      margin: 38px auto 0;
+      padding: 22px;
+      border-top: 1px solid rgba(201,169,110,.35);
+      border-bottom: 1px solid rgba(201,169,110,.35);
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 300;
+    }
+
+    .note strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      padding: 24px 15px 32px;
+      border-top: 1px solid rgba(201,169,110,.2);
+      color: #aaa69e;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 800px) {
+      .collections {
+        grid-template-columns: 1fr;
+        max-width: 490px;
+        margin: 0 auto;
+      }
+
+      .collection {
+        min-height: 350px;
+      }
+
+      header {
+        padding-top: 43px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 43px;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+
+      .collection {
+        padding: 27px 22px 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="ornament">✧ ✦ ✧</div>
+      <p class="eyebrow">Un espace pour nourrir votre vie intérieure</p>
+      <h1>Votre <span>Coffret</span><br>Spirituel</h1>
+      <div class="gold-line"></div>
+      <p class="intro">
+        Bienvenue dans votre bibliothèque spirituelle.
+        Retrouvez ici vos collections de prières, de méditations
+        et de réflexions pour avancer à votre rythme.
+      </p>
+    </header>
+
+    <main>
+      <div class="section-heading">
+        <h2>Vos trois collections</h2>
+        <p>Choisissez votre espace et accédez à vos ressources.</p>
+      </div>
+
+      <section class="collections">
+
+        <article class="collection">
+          <div class="collection-number">01</div>
+          <div class="symbol">✧</div>
+          <h3>Le Sanctuaire Personnel</h3>
+          <p>
+            Votre espace personnel de prière, de gratitude
+            et de réflexion. Des carnets pour écrire,
+            méditer et cultiver votre cheminement intérieur.
+          </p>
+          <div class="contents">Journaux · Intentions · Gratitude</div>
+          <a class="button" href="#" data-collection="sanctuaire">
+            Télécharger les fichiers
+          </a>
+        </article>
+
+        <article class="collection">
+          <div class="collection-number">02</div>
+          <div class="symbol">✥</div>
+          <h3>Le Parcours des 40 Jours</h3>
+          <p>
+            Quarante jours de réflexions, de prières
+            et d'approfondissement spirituel autour de la foi,
+            du pardon, de la gratitude et de l'espérance.
+          </p>
+          <div class="contents">40 jours · 4 thèmes · Guide PDF</div>
+          <a class="button" href="#" data-collection="parcours">
+            Télécharger les fichiers
+          </a>
+        </article>
+
+        <article class="collection">
+          <div class="collection-number">03</div>
+          <div class="symbol">❖</div>
+          <h3>Le Coffret des Prières et des Méditations</h3>
+          <p>
+            Une bibliothèque de prières, de méditations
+            et d'audios pour vous accompagner dans
+            les différents moments de votre vie.
+          </p>
+          <div class="contents">50 prières · 30 méditations · 20 audios</div>
+          <a class="button" href="#" data-collection="coffret">
+            Accéder aux fichiers
+          </a>
+        </article>
+
+      </section>
+
+      <div class="note">
+        <strong>Un cheminement à votre rythme</strong>
+        Prenez le temps de découvrir chaque ressource.
+        Votre espace est là pour vous accompagner jour après jour.
+      </div>
+    </main>
+
+    <footer>
+      <span>✧</span> LE COFFRET SPIRITUEL COMPLET <span>✧</span>
+    </footer>
+  </div>
+
+  <script>
+    /*
+      AJOUTEZ ICI LES LIENS DE VOS DOSSIERS GOOGLE DRIVE.
+      Remplacez les chaînes vides par les liens de partage correspondants.
+    */
+    const DRIVE_LINKS = {
+      sanctuaire: "",
+      parcours: "",
+      coffret: ""
+    };
+
+    document.querySelectorAll("[data-collection]").forEach(button => {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const collection = this.dataset.collection;
+        const link = DRIVE_LINKS[collection];
+
+        if (link && link.startsWith("https://")) {
+          window.open(link, "_blank", "noopener,noreferrer");
+        } else {
+          alert("Les fichiers de cette collection seront disponibles ici très bientôt.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
