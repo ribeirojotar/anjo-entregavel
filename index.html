@@ -4,25 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101b32">
-  <meta name="description" content="Découvrez votre Coffret Spirituel Complet : prières, méditations, réflexions et parcours spirituel.">
-  <title>Votre Coffret Spirituel</title>
+  <meta name="theme-color" content="#101b2d">
+  <title>L’Alliance des 19 jours | Votre espace de ressources</title>
+  <meta name="description" content="Retrouvez votre guide, votre calendrier de suivi et vos audios de L’Alliance des 19 jours.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --navy: #101b32;
-      --navy-light: #192944;
-      --gold: #c9a96e;
-      --gold-light: #e6d2a8;
-      --cream: #f7f2e8;
-      --text: #f8f4eb;
-      --muted: #c8c2b7;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -30,357 +20,310 @@
     }
 
     body {
-      background: var(--navy);
-      color: var(--text);
+      background: #f5f1e9;
+      color: #172238;
       font-family: 'Montserrat', sans-serif;
       line-height: 1.7;
     }
 
-    .page {
-      min-height: 100vh;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(201,169,110,.13), transparent 45%),
-        var(--navy);
-    }
-
     header {
+      background: linear-gradient(135deg, #101b2d, #243650);
+      color: #fff;
       text-align: center;
-      padding: 58px 20px 42px;
-    }
-
-    .ornament {
-      color: var(--gold);
-      font-size: 25px;
-      letter-spacing: 12px;
-      margin-bottom: 16px;
+      padding: 65px 20px 75px;
     }
 
     .eyebrow {
-      color: var(--gold-light);
-      font-size: 10px;
-      font-weight: 600;
+      color: #d7bd85;
+      font-size: 11px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
-    h1, h2, h3 {
+    header h1 {
       font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 7vw, 68px);
       font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
-    h1 {
-      font-size: clamp(43px, 8vw, 72px);
-      line-height: 1.05;
-      color: var(--cream);
-    }
-
-    h1 span {
-      color: var(--gold-light);
-      font-style: italic;
-    }
-
-    .intro {
-      max-width: 590px;
-      margin: 22px auto 0;
-      color: var(--muted);
+    header p {
+      color: #e2e4e9;
       font-size: 13px;
       font-weight: 300;
+      max-width: 550px;
+      margin: auto;
     }
 
     .gold-line {
-      width: 76px;
-      height: 1px;
-      background: var(--gold);
-      margin: 27px auto;
+      width: 65px;
+      height: 2px;
+      background: #c8a96b;
+      margin: 28px auto;
     }
 
     main {
-      width: min(1080px, calc(100% - 36px));
-      margin: 0 auto;
-      padding-bottom: 65px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin: 8px 0 30px;
-    }
-
-    .section-heading h2 {
-      font-size: 32px;
-      color: var(--gold-light);
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 4px;
-    }
-
-    .collections {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .collection {
+      max-width: 950px;
+      margin: -30px auto 0;
+      padding: 0 20px 70px;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 390px;
-      padding: 30px 25px 26px;
-      border: 1px solid rgba(201,169,110,.36);
-      border-radius: 3px;
-      background:
-        linear-gradient(160deg, rgba(255,255,255,.045), transparent 55%),
-        var(--navy-light);
+    }
+
+    .intro {
+      background: #fff;
+      border: 1px solid #e8dfcf;
+      padding: 30px;
       text-align: center;
-      transition: transform .3s ease, border-color .3s ease;
+      margin-bottom: 38px;
+      box-shadow: 0 10px 35px rgba(20, 30, 45, 0.06);
     }
 
-    .collection:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-    }
-
-    .collection-number {
-      color: var(--gold);
+    .intro h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
-      letter-spacing: 3px;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
-    .symbol {
+    .intro p {
+      color: #687080;
+      font-size: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      margin: 38px 0 18px;
+      text-align: center;
+    }
+
+    .resource {
+      background: #fff;
+      border: 1px solid #e7dfd1;
+      padding: 27px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 74px;
-      height: 74px;
-      margin: 19px auto 17px;
-      border: 1px solid rgba(201,169,110,.55);
-      border-radius: 50%;
-      color: var(--gold-light);
-      font-size: 29px;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 5px 18px rgba(20, 30, 45, 0.035);
     }
 
-    .collection h3 {
-      color: var(--cream);
-      font-size: 28px;
-      line-height: 1.12;
-      margin-bottom: 14px;
+    .resource-info {
+      flex: 1;
     }
 
-    .collection p {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.9;
-      flex-grow: 1;
-    }
-
-    .contents {
-      color: var(--gold-light);
+    .resource-label {
+      color: #b18d4e;
       font-size: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin: 19px 0 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .resource h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .resource p {
+      color: #737b88;
+      font-size: 11px;
     }
 
     .button {
       display: inline-block;
-      width: 100%;
-      padding: 13px 12px;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: #172238;
-      font-family: 'Montserrat', sans-serif;
+      background: #17263d;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 19px;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 1.4px;
-      text-decoration: none;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      cursor: pointer;
-      transition: background .25s ease, color .25s ease;
+      text-align: center;
+      white-space: nowrap;
+      transition: background 0.2s;
     }
 
     .button:hover {
-      background: transparent;
-      color: var(--gold-light);
+      background: #b18d4e;
+    }
+
+    .audio-section {
+      margin-top: 12px;
+    }
+
+    .audio-card {
+      background: #fff;
+      border: 1px solid #e7dfd1;
+      padding: 22px;
+      margin-bottom: 13px;
+    }
+
+    .audio-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    audio {
+      width: 100%;
+      margin: 5px 0 12px;
+    }
+
+    .audio-link {
+      color: #8e713e;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .audio-link:hover {
+      text-decoration: underline;
     }
 
     .note {
-      max-width: 650px;
-      margin: 38px auto 0;
-      padding: 22px;
-      border-top: 1px solid rgba(201,169,110,.35);
-      border-bottom: 1px solid rgba(201,169,110,.35);
-      text-align: center;
-      color: var(--muted);
+      background: #eee7da;
+      border-left: 3px solid #b18d4e;
+      padding: 18px 20px;
+      margin-top: 30px;
+      color: #606a78;
       font-size: 11px;
-      font-weight: 300;
-    }
-
-    .note strong {
-      display: block;
-      color: var(--gold-light);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 5px;
     }
 
     footer {
-      padding: 24px 15px 32px;
-      border-top: 1px solid rgba(201,169,110,.2);
-      color: #aaa69e;
+      background: #101b2d;
+      color: #b9c0cb;
       text-align: center;
+      padding: 28px 20px;
       font-size: 10px;
       letter-spacing: 1px;
     }
 
-    footer span {
-      color: var(--gold);
-    }
-
-    @media (max-width: 800px) {
-      .collections {
-        grid-template-columns: 1fr;
-        max-width: 490px;
-        margin: 0 auto;
-      }
-
-      .collection {
-        min-height: 350px;
-      }
-
+    @media (max-width: 600px) {
       header {
-        padding-top: 43px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      h1 {
-        font-size: 43px;
+        padding: 50px 18px 65px;
       }
 
-      .section-heading h2 {
-        font-size: 28px;
+      .intro {
+        padding: 24px 18px;
       }
 
-      .collection {
-        padding: 27px 22px 23px;
+      .resource {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px;
+      }
+
+      .resource .button {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <header>
-      <div class="ornament">✧ ✦ ✧</div>
-      <p class="eyebrow">Un espace pour nourrir votre vie intérieure</p>
-      <h1>Votre <span>Coffret</span><br>Spirituel</h1>
-      <div class="gold-line"></div>
-      <p class="intro">
-        Bienvenue dans votre bibliothèque spirituelle.
-        Retrouvez ici vos collections de prières, de méditations
-        et de réflexions pour avancer à votre rythme.
-      </p>
-    </header>
 
-    <main>
-      <div class="section-heading">
-        <h2>Vos trois collections</h2>
-        <p>Choisissez votre espace et accédez à vos ressources.</p>
+  <header>
+    <div class="eyebrow">Votre espace personnel</div>
+    <h1>L’Alliance des 19 jours</h1>
+    <div class="gold-line"></div>
+    <p>Bienvenue dans votre espace de ressources. Retrouvez ici vos guides, votre calendrier et vos audios.</p>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h2>Votre parcours commence ici</h2>
+      <p>Prenez le temps de découvrir chaque ressource et avancez à votre propre rythme.</p>
+    </section>
+
+    <h2 class="section-title">Vos guides et ressources</h2>
+
+    <section class="resource">
+      <div class="resource-info">
+        <div class="resource-label">Document PDF · Guide principal</div>
+        <h3>Guide principal — L’Alliance des 19 jours</h3>
+        <p>Retrouvez votre guide principal et les orientations de votre parcours.</p>
+      </div>
+      <a class="button" href="https://drive.google.com/file/d/1b0FNaQhzB0bHBfX4GA3urzJvpkJm48T6/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir le guide</a>
+    </section>
+
+    <section class="resource">
+      <div class="resource-info">
+        <div class="resource-label">Document PDF · Suivi</div>
+        <h3>Calendrier de suivi — 19 jours</h3>
+        <p>Suivez votre progression et accompagnez chaque étape de votre parcours.</p>
+      </div>
+      <a class="button" href="https://drive.google.com/file/d/1MnI2R5wLAZ8NJa0AzJKzu6VIgtpd6rgO/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir le calendrier</a>
+    </section>
+
+    <h2 class="section-title">Vos audios</h2>
+
+    <section class="audio-section">
+
+      <div class="audio-card">
+        <div class="resource-label">Audio 01</div>
+        <h3>Votre audio 01</h3>
+        <audio controls preload="none">
+          <source src="https://drive.google.com/uc?export=download&id=1tACwqHfJjcV4VXS0Br95kgnVHlAzObRc">
+        </audio>
+        <a class="audio-link" href="https://drive.google.com/file/d/1tACwqHfJjcV4VXS0Br95kgnVHlAzObRc/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir l’audio sur Google Drive</a>
       </div>
 
-      <section class="collections">
-
-        <article class="collection">
-          <div class="collection-number">01</div>
-          <div class="symbol">✧</div>
-          <h3>Le Sanctuaire Personnel</h3>
-          <p>
-            Votre espace personnel de prière, de gratitude
-            et de réflexion. Des carnets pour écrire,
-            méditer et cultiver votre cheminement intérieur.
-          </p>
-          <div class="contents">Journaux · Intentions · Gratitude</div>
-          <a class="button" href="#" data-collection="sanctuaire">
-            Télécharger les fichiers
-          </a>
-        </article>
-
-        <article class="collection">
-          <div class="collection-number">02</div>
-          <div class="symbol">✥</div>
-          <h3>Le Parcours des 40 Jours</h3>
-          <p>
-            Quarante jours de réflexions, de prières
-            et d'approfondissement spirituel autour de la foi,
-            du pardon, de la gratitude et de l'espérance.
-          </p>
-          <div class="contents">40 jours · 4 thèmes · Guide PDF</div>
-          <a class="button" href="#" data-collection="parcours">
-            Télécharger les fichiers
-          </a>
-        </article>
-
-        <article class="collection">
-          <div class="collection-number">03</div>
-          <div class="symbol">❖</div>
-          <h3>Le Coffret des Prières et des Méditations</h3>
-          <p>
-            Une bibliothèque de prières, de méditations
-            et d'audios pour vous accompagner dans
-            les différents moments de votre vie.
-          </p>
-          <div class="contents">50 prières · 30 méditations · 20 audios</div>
-          <a class="button" href="#" data-collection="coffret">
-            Accéder aux fichiers
-          </a>
-        </article>
-
-      </section>
-
-      <div class="note">
-        <strong>Un cheminement à votre rythme</strong>
-        Prenez le temps de découvrir chaque ressource.
-        Votre espace est là pour vous accompagner jour après jour.
+      <div class="audio-card">
+        <div class="resource-label">Audio 02</div>
+        <h3>Votre audio 02</h3>
+        <audio controls preload="none">
+          <source src="https://drive.google.com/uc?export=download&id=17ohCcjTUP0BFK4KANsalRuZoiEjE-R2k">
+        </audio>
+        <a class="audio-link" href="https://drive.google.com/file/d/17ohCcjTUP0BFK4KANsalRuZoiEjE-R2k/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir l’audio sur Google Drive</a>
       </div>
-    </main>
 
-    <footer>
-      <span>✧</span> LE COFFRET SPIRITUEL COMPLET <span>✧</span>
-    </footer>
-  </div>
+      <div class="audio-card">
+        <div class="resource-label">Audio 03</div>
+        <h3>Votre audio 03</h3>
+        <audio controls preload="none">
+          <source src="https://drive.google.com/uc?export=download&id=1s-x3r6IToVvV5xDXVH2axJES0mHymeES">
+        </audio>
+        <a class="audio-link" href="https://drive.google.com/file/d/1s-x3r6IToVvV5xDXVH2axJES0mHymeES/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir l’audio sur Google Drive</a>
+      </div>
 
-  <script>
-    /*
-      AJOUTEZ ICI LES LIENS DE VOS DOSSIERS GOOGLE DRIVE.
-      Remplacez les chaînes vides par les liens de partage correspondants.
-    */
-    const DRIVE_LINKS = {
-      sanctuaire: "",
-      parcours: "",
-      coffret: ""
-    };
+      <div class="audio-card">
+        <div class="resource-label">Audio 04</div>
+        <h3>Votre audio 04</h3>
+        <audio controls preload="none">
+          <source src="https://drive.google.com/uc?export=download&id=1rULDlK6c68SLKXDNmXUQ2qVTjmNgorbR">
+        </audio>
+        <a class="audio-link" href="https://drive.google.com/file/d/1rULDlK6c68SLKXDNmXUQ2qVTjmNgorbR/view?usp=drive_link" target="_blank" rel="noopener">Ouvrir l’audio sur Google Drive</a>
+      </div>
 
-    document.querySelectorAll("[data-collection]").forEach(button => {
-      button.addEventListener("click", function(event) {
-        event.preventDefault();
+    </section>
 
-        const collection = this.dataset.collection;
-        const link = DRIVE_LINKS[collection];
+    <div class="note">
+      <strong>Un conseil :</strong> conservez cette page dans vos favoris pour retrouver facilement vos ressources pendant votre parcours.
+    </div>
 
-        if (link && link.startsWith("https://")) {
-          window.open(link, "_blank", "noopener,noreferrer");
-        } else {
-          alert("Les fichiers de cette collection seront disponibles ici très bientôt.");
-        }
-      });
-    });
-  </script>
+  </main>
+
+  <footer>
+    L’ALLIANCE DES 19 JOURS · VOTRE ESPACE DE RESSOURCES
+  </footer>
+
 </body>
 </html>
